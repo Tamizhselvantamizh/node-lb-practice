@@ -5,7 +5,9 @@ const app = express()
 
 app.use(bodyParser.json())
 
-
+app.get("/", (req,res) => {
+    res.status(200)
+})
 app.post("/json-body-to-file", (req, res) => {
     
     res.status(200).json({
